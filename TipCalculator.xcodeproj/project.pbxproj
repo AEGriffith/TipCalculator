@@ -14,6 +14,7 @@
 		37A2384F1CAC829300515A8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2384D1CAC829300515A8F /* LaunchScreen.storyboard */; };
 		37A2385A1CAC829300515A8F /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A238591CAC829300515A8F /* TipCalculatorTests.swift */; };
 		37A238651CAC829300515A8F /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A238641CAC829300515A8F /* TipCalculatorUITests.swift */; };
+		37A238731CADB0DC00515A8F /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A238721CADB0DC00515A8F /* TipCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		37A238601CAC829300515A8F /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A238641CAC829300515A8F /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
 		37A238661CAC829300515A8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37A238721CADB0DC00515A8F /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		37A238381CAC829300515A8F = {
 			isa = PBXGroup;
 			children = (
+				37A238721CADB0DC00515A8F /* TipCalculatorModel.swift */,
 				37A238431CAC829300515A8F /* TipCalculator */,
 				37A238581CAC829300515A8F /* TipCalculatorTests */,
 				37A238631CAC829300515A8F /* TipCalculatorUITests */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37A238731CADB0DC00515A8F /* TipCalculatorModel.swift in Sources */,
 				37A238471CAC829300515A8F /* ViewController.swift in Sources */,
 				37A238451CAC829300515A8F /* AppDelegate.swift in Sources */,
 			);
