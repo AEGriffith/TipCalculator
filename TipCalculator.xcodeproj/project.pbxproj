@@ -138,6 +138,7 @@
 				37A2383D1CAC829300515A8F /* Sources */,
 				37A2383E1CAC829300515A8F /* Frameworks */,
 				37A2383F1CAC829300515A8F /* Resources */,
+				372432C81CED35930026AEBE /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -253,6 +254,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		372432C81CED35930026AEBE /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect && swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		37A2383D1CAC829300515A8F /* Sources */ = {
@@ -486,6 +504,7 @@
 				37A2386B1CAC829300515A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37A2386C1CAC829300515A8F /* Build configuration list for PBXNativeTarget "TipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +513,7 @@
 				37A2386E1CAC829300515A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37A2386F1CAC829300515A8F /* Build configuration list for PBXNativeTarget "TipCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +522,7 @@
 				37A238711CAC829300515A8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
