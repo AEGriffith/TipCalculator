@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YuY-qi-YdV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YuY-qi-YdV">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -21,13 +21,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tax Percentage (0%):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H5p-7c-xdi">
                                 <rect key="frame" x="20" y="120" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bill Total (Post-Tax):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlR-s0-7q8">
                                 <rect key="frame" x="33" y="81" width="152" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5e-Bd-uBu">
@@ -48,32 +48,34 @@
                                     <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8IH-RP-Uk9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5f-Fq-eHv">
-                                <rect key="frame" x="16" y="192" width="568" height="400"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-rl-p7n">
+                                <rect key="frame" x="0.0" y="192" width="600" height="408"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="R31-gQ-eCo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="DWQ-xh-OmJ"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="f5f-Fq-eHv" secondAttribute="bottom" constant="8" symbolic="YES" id="44W-uY-zaG"/>
-                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="leading" secondItem="hJ9-la-37G" secondAttribute="leading" id="AJJ-7Z-HYt"/>
-                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="trailing" secondItem="hJ9-la-37G" secondAttribute="trailing" id="Jft-iP-nEX"/>
-                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="U2Q-8b-p99"/>
-                            <constraint firstItem="hJ9-la-37G" firstAttribute="trailing" secondItem="f5f-Fq-eHv" secondAttribute="trailing" id="UhY-Uz-sHO"/>
-                            <constraint firstItem="sxh-dM-5Mc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XQa-Sw-7hx"/>
-                            <constraint firstItem="sxh-dM-5Mc" firstAttribute="top" secondItem="hJ9-la-37G" secondAttribute="bottom" constant="8" symbolic="YES" id="XhD-bY-fs7"/>
-                            <constraint firstItem="f5f-Fq-eHv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="ahx-m0-Xrj"/>
-                            <constraint firstItem="H5p-7c-xdi" firstAttribute="centerY" secondItem="hJ9-la-37G" secondAttribute="centerY" id="hSX-Sv-4aw"/>
-                            <constraint firstItem="hJ9-la-37G" firstAttribute="leading" secondItem="H5p-7c-xdi" secondAttribute="trailing" constant="9" id="ixL-JL-khL"/>
-                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="leading" secondItem="FlR-s0-7q8" secondAttribute="trailing" constant="7" id="muF-8Y-fza"/>
-                            <constraint firstItem="f5f-Fq-eHv" firstAttribute="top" secondItem="sxh-dM-5Mc" secondAttribute="bottom" constant="8" symbolic="YES" id="tT8-SR-eaP"/>
-                            <constraint firstItem="H5p-7c-xdi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tl8-cg-lCQ"/>
-                            <constraint firstItem="hJ9-la-37G" firstAttribute="top" secondItem="C5e-Bd-uBu" secondAttribute="bottom" constant="9" id="uSM-6q-kY5"/>
-                            <constraint firstItem="sxh-dM-5Mc" firstAttribute="centerX" secondItem="f5f-Fq-eHv" secondAttribute="centerX" id="vFF-hD-70F"/>
-                            <constraint firstItem="FlR-s0-7q8" firstAttribute="centerY" secondItem="C5e-Bd-uBu" secondAttribute="centerY" id="zrb-g1-63O"/>
+                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="leading" secondItem="FlR-s0-7q8" secondAttribute="trailing" constant="7" id="2M6-MJ-b2D"/>
+                            <constraint firstItem="sxh-dM-5Mc" firstAttribute="top" secondItem="hJ9-la-37G" secondAttribute="bottom" constant="8" symbolic="YES" id="76t-gE-JyY"/>
+                            <constraint firstItem="FlR-s0-7q8" firstAttribute="centerY" secondItem="C5e-Bd-uBu" secondAttribute="centerY" id="9jK-dt-Yjx"/>
+                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="leading" secondItem="hJ9-la-37G" secondAttribute="leading" id="Eyl-Qm-Kqv"/>
+                            <constraint firstItem="jzJ-rl-p7n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="SyV-Oi-rpu"/>
+                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="Z9u-bz-BwU"/>
+                            <constraint firstItem="sxh-dM-5Mc" firstAttribute="centerX" secondItem="jzJ-rl-p7n" secondAttribute="centerX" id="ZC8-qZ-ma0"/>
+                            <constraint firstItem="jzJ-rl-p7n" firstAttribute="top" secondItem="sxh-dM-5Mc" secondAttribute="bottom" constant="8" symbolic="YES" id="ccH-4m-E0D"/>
+                            <constraint firstItem="hJ9-la-37G" firstAttribute="top" secondItem="C5e-Bd-uBu" secondAttribute="bottom" constant="9" id="dvu-Yy-nDA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="C5e-Bd-uBu" secondAttribute="trailing" constant="-4" id="fmJ-jx-Tuh"/>
+                            <constraint firstItem="hJ9-la-37G" firstAttribute="leading" secondItem="H5p-7c-xdi" secondAttribute="trailing" constant="9" id="jUC-Fv-pD0"/>
+                            <constraint firstItem="C5e-Bd-uBu" firstAttribute="trailing" secondItem="hJ9-la-37G" secondAttribute="trailing" id="jmU-wG-leJ"/>
+                            <constraint firstItem="H5p-7c-xdi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ly9-Zb-Nlt"/>
+                            <constraint firstAttribute="trailing" secondItem="jzJ-rl-p7n" secondAttribute="trailing" id="r0Q-TU-zya"/>
+                            <constraint firstItem="jzJ-rl-p7n" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="tZP-Uz-HWi"/>
+                            <constraint firstItem="H5p-7c-xdi" firstAttribute="centerY" secondItem="hJ9-la-37G" secondAttribute="centerY" id="yDb-k2-q0M"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="WL9-9a-Vmc" appends="YES" id="6qk-g3-Oja"/>
@@ -81,7 +83,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Tip Calculator" id="eZZ-2F-LyE"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="f5f-Fq-eHv" id="ssS-Gx-aeo"/>
+                        <outlet property="tableView" destination="jzJ-rl-p7n" id="emE-Ls-Q4z"/>
                         <outlet property="taxPctLabel" destination="H5p-7c-xdi" id="0AG-84-pbO"/>
                         <outlet property="taxPctSlider" destination="hJ9-la-37G" id="21g-YQ-XTD"/>
                         <outlet property="totalTextField" destination="C5e-Bd-uBu" id="4Sg-ys-QVq"/>
